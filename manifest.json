@@ -1,0 +1,76 @@
+{
+  "manifest_version": 3,
+  "name": "Bobby - Your Reading Buddy",
+  "description": "Meet Bobby, your friendly reading companion! Highlight text to get instant explanations and insights. Like Clippy, but actually helpful.",
+  "version": "1.0.0",
+  "icons": {
+    "128": "icon.png"
+  },
+  "permissions": [
+    "contextMenus",
+    "activeTab",
+    "storage",
+    "scripting",
+    "unlimitedStorage",
+    "background"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [{
+    "matches": [
+      "<all_urls>",
+      "http://*/*.pdf",
+      "https://*/*.pdf",
+      "file://*/*.pdf"
+    ],
+    "css": ["styles.css"],
+    "js": [
+      "config.js",
+      "draggable.js",
+      "history.js",
+      "components/HallucinationDetector.js",
+      "components/ModuleInitializer.js",
+      "content.js"
+    ],
+    "run_at": "document_idle"
+  }],
+  "commands": {
+    "quick-explain": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+X",
+        "mac": "Command+Shift+X"
+      },
+      "description": "Explain selected text"
+    }
+  },
+  "host_permissions": [
+    "https://api.openai.com/*",
+    "https://api.exa.ai/*",
+    "https://api.perplexity.ai/*",
+    "file:///*"
+  ],
+  "web_accessible_resources": [{
+    "resources": [
+      "styles.css",
+      "icon.png",
+      "assets/*.svg",
+      "assets/*.png",
+      "components/modules/*.js",
+      "components/*.js"
+    ],
+    "matches": ["<all_urls>"]
+  }],
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "chrome_url_overrides": {
+    "history": "history.html"
+  },
+  "options_page": "options.html"
+} 

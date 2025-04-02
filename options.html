@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bobby Settings</title>
+  <style>
+    body {
+      padding: 20px;
+      font-family: system-ui;
+    }
+    .input-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    input {
+      width: 300px;
+      padding: 5px;
+    }
+    button {
+      padding: 8px 15px;
+      background: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .status {
+      margin-top: 10px;
+      color: #4CAF50;
+    }
+  </style>
+</head>
+<body>
+  <h2>Bobby API Configuration</h2>
+  
+  <div class="input-group">
+    <label for="openai">OpenAI API Key:</label>
+    <input type="password" id="openai" />
+  </div>
+
+  <div class="input-group">
+    <label for="exa">Exa API Key:</label>
+    <input type="password" id="exa" />
+  </div>
+
+  <div class="input-group">
+    <label for="pplx">Perplexity API Key:</label>
+    <input type="password" id="pplx" />
+  </div>
+
+  <button id="save">Save Settings</button>
+  <div id="status" class="status"></div>
+
+  <script src="options.js"></script>
+</body>
+</html> 

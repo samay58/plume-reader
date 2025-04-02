@@ -1,0 +1,22 @@
+# API Keys and Configuration
+config.js
+.env
+
+# IDE/Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Dependencies
+node_modules/
+.specstory/ 
+**/CLAUDE.local.md
