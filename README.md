@@ -1,6 +1,6 @@
-# Plumage: Elevate Your Reading
+# Bobby: Your Reading Buddy
 
-A powerful browser extension that enhances your online reading experience with AI-powered insights. Highlight any text to receive instant explanations, summaries, and analysis - making complex content accessible with just a click.
+Meet Bobby, your friendly reading companion! Highlight text to get instant explanations and insights. Like Clippy, but actually helpful.
 
 ## Features
 
@@ -24,15 +24,14 @@ A powerful browser extension that enhances your online reading experience with A
 
 1. Clone this repository:
 ```bash
-git clone https://github.com/yourusername/ai-reader-browser-extension.git
+git clone https://github.com/samay58/plume.git
 ```
 
 2. Create a `config.js` file in the root directory with your API keys:
 ```javascript
-window.PLUMAGE_CONFIG = {
-  OPENAI_API_KEY: 'your-openai-api-key',
-  EXA_API_KEY: 'your-exa-api-key',
-  PPLX_API_KEY: 'your-perplexity-api-key'
+window.BOBBY_CONFIG = {
+  OPENAI_API_KEY: 'your-openai-api-key-here',
+  EXA_API_KEY: 'your-exa-api-key-here'
 };
 ```
 
@@ -46,7 +45,7 @@ window.PLUMAGE_CONFIG = {
 ## Usage
 
 1. Highlight text on any webpage or PDF document
-2. Click the Plumage button that appears
+2. Click the Bobby button that appears
 3. Select your preferred analysis mode
 4. Review the AI-generated insights
 5. Use follow-up questions or verification as needed
@@ -96,7 +95,6 @@ The extension fully supports PDF documents across various scenarios:
 - Integration with multiple AI APIs:
   - OpenAI GPT for content analysis
   - Exa for source verification
-  - Perplexity for enhanced responses
 
 ### Core Modules
 
@@ -128,11 +126,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - OpenAI for their GPT technology
 - Exa for their research and verification capabilities
-- Perplexity for advanced response generation
 
 ## Privacy Policy
 
-Plumage respects your privacy:
+Bobby respects your privacy:
 - Minimal data collection, limited to functional requirements
 - No tracking or analytics
 - Local processing whenever possible
@@ -140,4 +137,4 @@ Plumage respects your privacy:
 
 ---
 
-Developed by Samay Dhawan
+Developed by Samay Dhawan | © 2025
